@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 110px;
+    padding-bottom: 100px;
+}
+
+.header .title {
+    width: 278px;
+    justify-content: flex-end;
+    padding-left: 45px;
+    padding-right: 40px;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    color: #000000;
+}
+
+.header .beginning h2{
+    padding-bottom: 10px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.header .beginning p {
+    padding-right: 20px;
+}
+
+.header .title {
+    font-family: 'PT Serif', serif;
+    font-size: 36px;
+    font-weight: 700;
+    width: 50%;
+}
+
+.main {
+    display: grid;
+    grid: "bill saba shae" 1fr
+          "skylah griff stan" 1fr
+          / 1fr 1fr 1fr;
+    gap: 25px 30px;
+}
+.main .item-1{
+    grid-area: bill;
+}
+.main .item-2{
+    grid-area: saba;
+    margin-top: 200px;
+}
+.main .item-3{
+    grid-area: shae;
+}
+.main .item-4{
+    grid-area: skylah;
+}
+.main .item-5{
+    grid-area: griff;
+    margin-top: 200px;
+}
+.main .item-6{
+    grid-area: stan;
+}
+.main .image img {
+    width: 280px;
+}
+.main .image h3 {
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.main .item {
+    display: flex;
+}
+.main .item > h4 {
+    font-family: 'PT Serif', serif;
+    font-size: 12px;
+    font-weight: 400;
+    writing-mode: vertical-lr;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+.main .item .image h3 {
+    padding-top: 15px;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 115px;
+}
+.footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #A9A9A9;
+}
+@media(max-width:960px) {
+    .header {
+        flex-direction: column;
+        padding: 70px 10px 40px 20px;
+    }
+    .header .beginning {
+        padding-top: 40px;
+        padding-left: 0;
+    }
+    .header .beginning p {
+        padding: 0;
+    }
+    .container .image img {
+        width: 100%;
+    }
+    .header .beginning,
+   .header .title {
+    width: 100%;
+   }
+    body {
+        width: 100%;
+    }
+    .container {
+        padding: 20px;
+        
+    }
+}
+
+@media(max-width:540px) {
+   
+   .header .beginning p,
+   .container .item .image h3{
+    font-size: 14px;
+    padding-right: 20px;
+   }
+   
+    .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: 20px;
+   } 
+   .container .item {
+    /* flex-shrink: 0; */
+    flex-basis: 155px;
+    flex-grow: 1;
+    margin-top: 0;
+    
+   }
+   .container .item:nth-child(even){
+    padding-top: 60px;
+   }
+   .container .item > h4 {
+    padding-left: 5px;
+   }
+   .container .item h4 {
+    font-size: 10px;
+   }
+   
+}
